@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33717.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILT.API", "ILT.API.csproj", "{BC73C814-18B1-4E12-877D-244946B1C065}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureStorageLibrary", "..\AzureStorageLibrary\AzureStorageLibrary.csproj", "{945FD691-DC55-4DF2-83DD-EA14FAC69C4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC73C814-18B1-4E12-877D-244946B1C065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC73C814-18B1-4E12-877D-244946B1C065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC73C814-18B1-4E12-877D-244946B1C065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC73C814-18B1-4E12-877D-244946B1C065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{945FD691-DC55-4DF2-83DD-EA14FAC69C4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{945FD691-DC55-4DF2-83DD-EA14FAC69C4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{945FD691-DC55-4DF2-83DD-EA14FAC69C4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{945FD691-DC55-4DF2-83DD-EA14FAC69C4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {09E74554-20D9-4E10-ABCF-30D4ED5821BB}
+	EndGlobalSection
+EndGlobal

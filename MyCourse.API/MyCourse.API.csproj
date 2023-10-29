@@ -1,0 +1,173 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<!--<DockerComposeProjectPath>docker-compose.dcproj</DockerComposeProjectPath>-->
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DefineConstants>DEBUG;TRACE</DefineConstants>
+		<Optimize>false</Optimize>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Modules\**" />
+		<Content Remove="Modules\**" />
+		<EmbeddedResource Remove="Modules\**" />
+		<None Remove="Modules\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Remove="Migrations\20180823053633_TableScheduleCode.cs" />
+		<Compile Remove="Migrations\20180823053633_TableScheduleCode.Designer.cs" />
+		<Compile Remove="Migrations\20180921104716_newColumnAddedEBTDetails.cs" />
+		<Compile Remove="Migrations\20180921104716_newColumnAddedEBTDetails.Designer.cs" />
+		<Compile Remove="Migrations\20181012091403_accessibilityRuleDatatypeChanged.cs" />
+		<Compile Remove="Migrations\20181012091403_accessibilityRuleDatatypeChanged.Designer.cs" />
+		<Compile Remove="Migrations\20181019090928_IsAccessGivenColumnAdded.cs" />
+		<Compile Remove="Migrations\20181019090928_IsAccessGivenColumnAdded.Designer.cs" />
+		<Compile Remove="Migrations\20190617061929_completionperiod_days_coursecode.cs" />
+		<Compile Remove="Migrations\20190617061929_completionperiod_days_coursecode.Designer.cs" />
+		<Compile Remove="Migrations\20191112062512_CareerJobRolesAdded.cs" />
+		<Compile Remove="Migrations\20191112062512_CareerJobRolesAdded.Designer.cs" />
+		<Compile Remove="Migrations\20191118061857_AddedSequenceNoInSubCategory.cs" />
+		<Compile Remove="Migrations\20191118061857_AddedSequenceNoInSubCategory.Designer.cs" />
+		<Compile Remove="Migrations\20191118085001_NextJobRoleIDAdded.cs" />
+		<Compile Remove="Migrations\20191118085001_NextJobRoleIDAdded.Designer.cs" />
+		<Compile Remove="Migrations\20191118090837_nextJobRoleIDAdded.cs" />
+		<Compile Remove="Migrations\20191118090837_nextJobRoleIDAdded.Designer.cs" />
+		<Compile Remove="Migrations\20191128120951_AddedUserPrefferedCourseLanguage.cs" />
+		<Compile Remove="Migrations\20191128120951_AddedUserPrefferedCourseLanguage.Designer.cs" />
+		<Compile Remove="Migrations\20191217063001_AssessmentCompetencyMapping.cs" />
+		<Compile Remove="Migrations\20191217063001_AssessmentCompetencyMapping.Designer.cs" />
+		<Compile Remove="Migrations\20200625084155_BranchIDaddedtpProcessresult.cs" />
+		<Compile Remove="Migrations\20200625084155_BranchIDaddedtpProcessresult.Designer.cs" />
+		<Compile Remove="Migrations\20200625100822_BranchID1addedtpProcessresult.cs" />
+		<Compile Remove="Migrations\20200625100822_BranchID1addedtpProcessresult.Designer.cs" />
+		<Compile Remove="Migrations\20201116055836_addedtablecategoryaccessabilityrule.cs" />
+		<Compile Remove="Migrations\20201116055836_addedtablecategoryaccessabilityrule.Designer.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<COMReference Include="Microsoft.Office.Interop.PowerPoint">
+			<WrapperTool>tlbimp</WrapperTool>
+			<VersionMinor>12</VersionMinor>
+			<VersionMajor>2</VersionMajor>
+			<Guid>91493440-5a91-11cf-8700-00aa0060263b</Guid>
+			<Lcid>0</Lcid>
+			<Isolated>false</Isolated>
+			<EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+		<COMReference Include="Microsoft.Office.Core">
+			<WrapperTool>tlbimp</WrapperTool>
+			<VersionMinor>8</VersionMinor>
+			<VersionMajor>2</VersionMajor>
+			<Guid>2df8d04c-5bfa-101b-bde5-00aa0044de52</Guid>
+			<Lcid>0</Lcid>
+			<Isolated>false</Isolated>
+			<EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Connected Services\" />
+		<Folder Include="Controllers\CourseRating\" />
+		<Folder Include="LXPFiles\" />
+		<Folder Include="Middleware\" />
+		<Folder Include="Model\DiscussionForum\" />
+		<Folder Include="wwwroot\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AspNetCoreRateLimit" Version="3.2.2" />
+		<PackageReference Include="Azure.Identity" Version="1.5.0" />
+		<PackageReference Include="Dapper" Version="1.50.5" />
+		<PackageReference Include="AutoMapper" Version="6.1.1" />
+		<PackageReference Include="Google.Apis.Calendar.v3" Version="1.38.0.1529" />
+		<PackageReference Include="log4net" Version="2.0.11" />
+		<PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.22" />
+
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.21" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.21" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.21" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.21" />
+
+		<PackageReference Include="AspNet.Security.OAuth.Introspection" Version="2.0.0-*" />
+		<PackageReference Include="NETCore.Encrypt" Version="2.1.1" />
+		<PackageReference Include="OpenIddict" Version="2.0.0-rc2-final" />
+		<PackageReference Include="OpenIddict.Mvc" Version="2.0.0-rc2-final" />
+		<PackageReference Include="OpenIddict.EntityFrameworkCore" Version="2.0.0-rc2-final" />
+		<PackageReference Include="AspNet.Security.OAuth.Validation" Version="2.0.0-*" />
+		<PackageReference Include="AspNet.Security.OAuth.Introspection" Version="2.0.0-*" />
+		<PackageReference Include="EPPlus.Core" Version="1.5.4" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="2.5.0" />
+		<!--<PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />-->
+		<PackageReference Include="NLog.Web.AspNetCore" Version="4.8.5" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.5.1" />
+		<PackageReference Include="System.Data.Common" Version="4.3.0" />
+		<PackageReference Include="System.Runtime.Caching" Version="4.7.0" />
+		<PackageReference Include="System.ServiceModel.Duplex" Version="4.4.*" />
+		<PackageReference Include="System.ServiceModel.Http" Version="4.4.*" />
+		<PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.*" />
+		<PackageReference Include="System.ServiceModel.Security" Version="4.4.*" />
+		<PackageReference Include="TimeZoneConverter" Version="5.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="ExternalIntegration\Payment\MCPG.CCA.Util.dll">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Resource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="Courses.API.sln" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\AzureStorageLibrary\AzureStorageLibrary.csproj">
+			<CopyLocal>True</CopyLocal>
+			<Private>True</Private>
+		</ProjectReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="MCPG.CCA.Util">
+			<HintPath>ExternalIntegration\MCPG.CCA.Util.dll</HintPath>
+			<CopyLocal>True</CopyLocal>
+		</Reference>
+	</ItemGroup>
+
+
+
+	<ItemGroup>
+		<WCFMetadata Include="Connected Services" />
+	</ItemGroup>
+
+
+
+	<ItemGroup>
+		<None Update="ExternalIntegration\Payment\MCPG.CCA.Util.dll">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Update="credentials.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ProjectExtensions>
+		<VisualStudio>
+			<UserProperties appsettings_1json__JsonSchema="https://json.schemastore.org/azure-iot-edge-deployment-template-2.0" />
+		</VisualStudio>
+	</ProjectExtensions>
+
+</Project>

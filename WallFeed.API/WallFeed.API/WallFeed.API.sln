@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WallFeed.API", "WallFeed.API.csproj", "{5C102052-632C-446B-BC4D-C61EA7168060}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureStorageLibrary", "..\..\AzureStorageLibrary\AzureStorageLibrary.csproj", "{025D17FE-A05B-46B4-A4CB-BB9A2F4F136E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C102052-632C-446B-BC4D-C61EA7168060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C102052-632C-446B-BC4D-C61EA7168060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C102052-632C-446B-BC4D-C61EA7168060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C102052-632C-446B-BC4D-C61EA7168060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{025D17FE-A05B-46B4-A4CB-BB9A2F4F136E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{025D17FE-A05B-46B4-A4CB-BB9A2F4F136E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{025D17FE-A05B-46B4-A4CB-BB9A2F4F136E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{025D17FE-A05B-46B4-A4CB-BB9A2F4F136E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0FC9B87-27B7-41F5-AD46-0E49FFF99356}
+	EndGlobalSection
+EndGlobal

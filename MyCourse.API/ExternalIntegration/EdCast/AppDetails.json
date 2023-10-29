@@ -1,0 +1,31 @@
+{
+  //"ClientID": "1210246f9186b75ba945e55b641c6edb",
+  //"ClientSecrete": "8eb66e95f850fe926ebabd82a3507f481275029a07813e5b5d772bfaea053e7a",
+  //"LmsHost": "https://aws-eu-central1-lms-integration.edcastpreview.com",
+
+  "APIKey": "68e9adeaf2f0c5120f1799a8afb28a82",
+  "Secrete": "7842719289b90c32ea9f8d7d1ed212e4d0029d034e6e80c3fffdda10326841b2",
+  "V5HostURL": "https://partner.edcastpreview.com",
+
+  //"APIKey": "870dd0b60b42ce0ceab6bc0572adcadb",
+  //"Secrete": "092e95f7c364a64876df28b37f909cb72916b6ea78d5663ee467adc5b8932297",
+  //"V5HostURL": "https://wnsuat.edcast.com",
+
+  "ClientID": "4719167978cbdbb5343d2961709b7e66",
+  "ClientSecrete": "3d936b80e1f2092a9ddcb29ea2599c9458c63f28b9fbd29e1fa7af3b8b9e4b4c",
+  "LmsHost": "https://lms.edcast.io",
+
+  "EmpoweredHost": "https://dev.gogetempowered.com",
+  "EmpoweredCourseUrl": "https://dev.gogetempowered.com:10000/api/v1/saml/SAMLRequestGenerate/courseid/wnsuat",
+  "DarwinboxCourseUrl": "https://uat.gogetempowered.com:10000/api/v1/saml/ssodouatlogin/courseid?",
+
+  "DarwinboxHost": "https://pms11.qa.darwinbox.io",
+  "Username": "Pms@212345",
+  "Password": "Agfxgfdtrfh$34(1",
+  "create_LA": "87755c4b5591b1d75d6da8d8a455e2d87f55e2cbe1f79bbdb58a1a7c0b01216228bbc6bb59b16cca261a5e42648ae8b102d25e8636a5c3273fa6116f4a3a929f",
+  "update_LA": "53ecf4dc3290db7ef1cd4195cce8531f6f4ccb5eb0def92161d95cb52208e88f303da18321f3f681589189731e58c9ca0d3c10a361eaf5b151ea58ab542de3f9",
+  "Program": "P001",
+  "AllowedOrgCode": "DBUAT,ent"
+
+
+}

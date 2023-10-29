@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<Optimize>False</Optimize>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Migrations\20180904124153_CustomerConnectionString.cs" />
+		<Compile Remove="Migrations\20180904124153_CustomerConnectionString.Designer.cs" />
+		<Compile Remove="Migrations\20180904124253_CustomerConnectionString.cs" />
+		<Compile Remove="Migrations\20180904124253_CustomerConnectionString.Designer.cs" />
+		<Compile Remove="Migrations\20180904124518_CustomerConnectionString–IgnoreChanges.cs" />
+		<Compile Remove="Migrations\20180904124518_CustomerConnectionString–IgnoreChanges.Designer.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="wwwroot\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AspNetCoreRateLimit" Version="3.2.2" />
+		<PackageReference Include="ClosedXML" Version="0.100.3" />
+		<PackageReference Include="Dapper" Version="1.50.5" />
+		<PackageReference Include="itext7.pdfhtml" Version="4.0.4" />
+		<PackageReference Include="log4net" Version="2.0.12" />
+		<!--<PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />-->
+		<!--<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />-->
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.21" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.21" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.21" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.0" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.0" />
+
+		<PackageReference Include="OpenIddict" Version="2.0.0" />
+		<PackageReference Include="OpenIddict.Mvc" Version="2.0.0" />
+		<PackageReference Include="OpenIddict.EntityFrameworkCore" Version="2.0.0" />
+		<PackageReference Include="AspNet.Security.OAuth.Introspection" Version="2.0.0-*" />
+		<PackageReference Include="NETCore.Encrypt" Version="2.1.1" />
+		<PackageReference Include="EPPlus.Core" Version="1.5.4" />
+		<!--<PackageReference Include="RestSharp" Version="106.11.4" />-->
+		<!--<PackageReference Include="Swashbuckle.AspNetCore" Version="2.5.0" />-->
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc2" />
+		<PackageReference Include="System.Data.Common" Version="4.3.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\AzureStorageLibrary\AzureStorageLibrary.csproj">
+	    <Private>True</Private>
+	  </ProjectReference>
+	</ItemGroup>
+
+</Project>

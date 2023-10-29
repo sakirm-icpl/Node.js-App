@@ -1,0 +1,200 @@
+﻿namespace CourseReport.API.Helper.MetaData
+{
+    public static class FileName
+    {
+        public static string CourseMasterAuditLog = "CourseMasterAuditLog.xlsx";
+        public static string AllSoctrainSACReport = "SoctrainSACReport.xlsx";
+        public static string AllUserTimeSpentReport = "AllUserTimeSpentReport.xlsx";
+        public static string AllUserTimeSpentReportCSV = "AllUserTimeSpentReport.csv";
+        public static string CourseAssessmentReport = "CourseAssessmentReport.xlsx";
+        public static string CourseAssessmentReportCSV = "CourseAssessmentReport.csv";
+        public static string CourseModuleReport = "CourseModuleReport.xlsx";
+        public static string CourseModuleReportCSV = "CourseModuleReport.csv";
+        public static string ILTDashboardReport = "ILTDashboardReport.xlsx";
+        public static string ILTDashboardReportCSV = "ILTDashboardReport.csv";
+        public static string ILTUserDetailsReport = "ILTUserDetailsReport.xlsx";
+        public static string ILTUserDetailsReportCSV = "ILTUserDetailsReport.csv";
+        public static string AllUserActivityReport = "AllUserActivityReport.xlsx";
+        public static string AllUserActivityReportCSV = "AllUserActivityReport.csv";
+        public static string AllUserActivityReportGraph = "AllUserActivityReportGraph.xlsx";
+        public static string UserwiseCoursecompletionreport = "UserwiseCoursecompletionreport.xlsx";
+        public static string UserwiseCoursecompletionreportCSV = "UserwiseCoursecompletionreport.csv";
+        public static string AllCourseSummaryReport = "AllCourseSummaryReport.xlsx";
+        public static string AllCourseSummaryReportCSV = "AllCourseSummaryReport.csv";
+        public static string FeedbackStatusReport = "FeedbackStatusReport.xlsx";
+        public static string FeedbackStatusReportCSV = "FeedbackStatusReport.csv";
+        public static string UserFeedbackReport = "UserFeedbackReport.xlsx";
+        public static string UserFeedbackReportCSV = "UserFeedbackReport.csv";
+        public static string CertificateDownloadReport = "CertificateDownloadReport.xlsx";
+        public static string CourseCompletionReport = "CourseCompletionReport.xlsx";
+        public static string CourseProgressReport = "CourseProgressReport.xlsx";
+        public static string CourseProgressReportCSV = "CourseProgressReport.csv";
+        public static string NotStartedCourseReport = "NotStartedCourseReport.xlsx";
+        public static string UserLoginStatistic = "UserLoginStatistic.xlsx";
+        public static string UserLoginStatisticCSV = "UserLoginStatistic.csv";
+        public static string DayWiseLoginReport = "DayWiseLoginReport.xlsx";
+        public static string UserWiseUsageReport = "UserWiseUsageReport.xlsx";
+        public static string UserWiseUsageReportCSV = "UserWiseUsageReport.csv";
+        public static string UserWiseAggregationReport = "UserWiseAggregationReport.xlsx";
+        public static string UserWiseAggregationReportCSV = "UserWiseAggregationReport.csv";
+        public static string AssessmentResultSheet = "AssessmentResultSheetReport.xlsx";
+        public static string RecommendedTraining = "RecommendedTraining.xlsx";
+        public static string AssessmentResultSheetCSV = "AssessmentResultSheetReport.csv";
+        public static string RecommendedTrainingCSV = "RecommendedTraining.csv";        
+            public static string UserAssessmentSheet = "UserAssessmentSheet.xlsx";
+        public static string UserAssessmentSheetCSV = "UserAssessmentSheet.csv";
+        public static string SurveyStatusReportSheet = "SurveyStatusReport.xlsx";
+        public static string SurveyStatusReportSheetCSV = "SurveyStatusReport.csv";
+        public static string UserSurveySheetReport = "UserSurveySheetReport.xlsx";
+        public static string UserSurveySheetReportCSV = "UserSurveySheetReport.csv";
+        public static string TestResultsReport = "Test Results CourseReport.xlsx";
+        public static string TestResultsReportCSV = "Test Results CourseReport.csv";
+        public static string UserLoginReport = "UserLoginReport.xlsx";
+        public static string UserLoginReportCSV = "UserLoginReport.csv";
+        public static string UserWithLoginFromDetail = "UserWithLoginFromDetail.xlsx";
+        public static string TnaSupervisionDetails = "TnaSupervisionDetails.xlsx";
+        public static string TnaSupervisionDetailsCSV = "TnaSupervisionDetails.csv";
+        public static string UserWithLoginFromDetailCSV = "UserWithLoginFromDetail.csv";
+        public static string UserLearningReport = "UserLearningReport.xlsx";
+        public static string UserLearningReportCSV = "UserLearningReport.csv";
+        public static string UserWiseLoginDetails = "UserWiseLoginDetailsReport.xlsx";
+        public static string UserWiseLoginDetailsCSV = "UserWiseLoginDetailsReport.csv";
+        public static string CourseWiseCompletionReport = "CourseWiseCompletionReport.xlsx";
+        public static string CourseWiseCompletionReportCSV = "CourseWiseCompletionReport.csv";
+        public static string DataMigrationReport = "DataMigrationReport.xlsx";
+        public static string DataMigrationReportCSV = "DataMigrationReport.csv";
+        public static string IndividualTrainingReport = "IndividualTrainingReport.xlsx";
+        public static string TNASummaryReport = "TNASummaryReport.xlsx";
+        public static string TNAProgressReport = "TNAProgressReport.xlsx";
+        public static string CourseRatingReport = "CourseRatingReport.xlsx";
+        public static string CourseRatingReportCSV = "CourseRatingReport.csv";
+        public static string UserwiseCourseStatusReportCSV = "UserwiseCourseStatusReport.csv"; 
+        public static string UserTimeSpentReport = "UserTotalTimeSpentReport.xlsx";
+        public static string UserTimeSpentReportCSV = "UserTotalTimeSpentReport.csv";
+        public static string AttendenceSummuryReport = "AttendenceSummuryReport.xlsx";
+        public static string AttendenceSummuryReportCSV = "AttendenceSummuryReport.csv";
+        public static string ScheduleWiseAttendanceReport = "ScheduleWiseAttendanceReport.xlsx";
+        public static string ScheduleWiseAttendanceReportCSV = "ScheduleWiseAttendanceReport.csv";
+        public static string InternalTrainersScheduleReport = "InternalTrainersScheduleReport.xlsx";
+        public static string InternalTrainersScheduleReportCSV = "InternalTrainersScheduleReport.csv";
+        public static string OpinionPollReport = "OpinionPollReport.xlsx";
+        public static string OpinionPollReportCSV = "OpinionPollReport.csv";
+        public static string SurveyApplicablityReport = "SurveyApplicablityReport.xlsx";
+        public static string SurveyApplicablityReportCSV = "SurveyApplicablityReport.csv";
+        public static string TrainingSummaryReport = "TrainingSummaryReport.xlsx";
+        public static string TrainingPassportReport = "TrainingPassportReport.xlsx";
+        public static string TrainingPassportReportCSV = "TrainingPassportReport.csv";
+        public static string TrainerProductivityReport = "TrainerProductivityReport.xlsx";
+        public static string TrainerProductivityReportCSV = "TrainerProductivityReport.csv";
+        public static string SummaryPastTrainingReports = "SummaryPastTrainingReports.xlsx";
+        public static string SummaryPastTrainingReportsCSV = "SummaryPastTrainingReports.csv";
+        public static string AverageProductivityReport = "AverageProductivityReport.xlsx";
+        public static string AverageProductivityReportCSV = "AverageProductivityReport.csv";
+        public static string ProgramAttendanceReport = "ProgramAttendanceReport.xlsx";
+        public static string ProgramAttendanceReportCSV = "ProgramAttendanceReport.csv";
+        public static string TrainerWiseCourseDetails = "TrainerWiseCourseDetails.xlsx";
+        public static string TrainerWiseCourseDetailsCSV = "TrainerWiseCourseDetails.csv";
+        public static string FeedbackAggregationReport = "FeedbackAggregationReport.xlsx";
+        public static string FeedbackAggregationReportCSV = "FeedbackAggregationReport.csv";
+        public static string TopicAttendanceReport = "TopicProgramAttendanceReport.xlsx";
+        public static string TopicAttendanceReportCSV = "TopicProgramAttendanceReport.csv";
+        public static string TopicFeedbackReport = "TopicFeedbackReport.xlsx";
+        public static string TopicFeedbackReportCSV = "TopicFeedbackReport.csv";
+        public static string UserNotLoggedReport = "UserNotLoggedReport.xlsx";
+        public static string UserNotLoggedReportCSV = "UserNotLoggedReport.csv";
+        public static string AttendanceDetailsReport = "AttendanceDetailsReport.xlsx";
+        public static string AttendanceDetailsReportCSV = "AttendanceDetailsReport.csv";
+        public static string AllCourseCompletionReport = "AllCourseCompletionReport.xlsx";
+        public static string AllCourseCompletionReportCSV = "AllCourseCompletionReport.csv";
+        public static string ControllingOfficewiseDealerLoginReport = "ControllingOfficewiseDealerLoginReport.xlsx";
+        public static string ControllingOfficewiseDealerLoginReportCSV = "ControllingOfficewiseDealerLoginReport.csv";
+        public static string DealerDetailLoginMonitoringReport = "DealerDetailLoginMonitoringReport.xlsx";
+        public static string DealerDetailLoginMonitoringReportCSV = "DealerDetailLoginMonitoringReport.csv";
+        public static string DivisionalWiseLoginDetailsReport = "DivisionalWiseLoginDetailsReport.xlsx";
+        public static string StateWiseLoginDetailsReport = "StateWiseLoginDetailsReport.xlsx";
+        public static string CourseCategoryWiseReport = "CourseCategoryWiseReport.xlsx";
+        public static string StateCourseCategoryWiseReport = "StateCourseCategoryWiseReport.xlsx";
+        public static string DivisionalCourseCategoryWiseReport = "DivisionalCourseCategoryWiseReport.xlsx";
+        public static string UserCategoryWiseReport = "UserCategoryWiseReport.xlsx";
+        public static string RewardPointsDetailsReport = "RewardPointsDetailsReport.xlsx";
+        public static string RewardPointsDetailsReportCSV = "RewardPointsDetailsReport.csv";
+        public static string RewardPointsSummeryReport = "RewardPointsSummeryReport.xlsx";
+        public static string RewardPointsSummeryReportCSV = "RewardPointsSummeryReport.csv";
+        public static string ILTTrainingReport = "ILTTrainingReport.xlsx";
+        public static string ILTTrainingReportCSV = "ILTTrainingReport.csv";
+        public static string TotalRewardPointEarnedReport = "TotalRewardPointEarnedReport.xlsx";
+        public static string SurveyWiseTimeSpentReport = "SurveyWiseTimeSpentReport.xlsx";
+        public static string ProcessEvaluationAuditReport = "TrainingandGuestAuditReport.xlsx";
+        public static string CriticalAuditReport = "CrticalAuditReport.xlsx";
+        public static string NightAuditReport = "NightAuditReport.xlsx";
+        public static string OpsAuditReport = "OpsAuditReport.xlsx";
+        public static string ProcessEvaluationAuditReportCSV = "ProcessEvaluationAuditReport.csv";
+        public static string ProcessEvaluationSectionWiseReport = "ProcessEvaluationSectionWiseReport.xlsx";
+        public static string ProcessEvaluationSectionWiseReportCSV = "ProcessEvaluationSectionWiseReport.csv";
+        public static string ProcessEvaluationStoreWiseReport = "ProcessEvaluationStoreWiseReport.xlsx";
+        public static string RegistrationReport = "RegistrationReport.xlsx";
+        public static string RegistrationReportCSV = "RegistrationReport.csv";
+        public static string ModeratorSubjectwiseContentSummaryReport = "ModeratorSubjectwiseContentSummaryReport.xlsx";
+        public static string ModeratorSubjectwiseContentDetailsReport = "ModeratorSubjectwiseContentDetailsReport.xlsx";
+        public static string UserwiseCourseStatusReport = "UserwiseCourseStatusReport.xlsx";
+        public static string UserWiseCourseDuration = "UserWiseCourseDuration.xlsx";
+        public static string UserWiseCourseDurationCSV = "UserWiseCourseDuration.csv";
+        public static string ILTReportForTabelz = "ILTReportForTabelz.xlsx";
+        public static string ILTReportForCANH = "ILTReportForCANH.xlsx";
+        public static string LoginAnalyticalDashboardReport = "LoginAnalyticalDashboardReport.xlsx";
+        public static string CourseAnalyticalDashboardReport = "CourseAnalyticalDashboardReport.xlsx";
+        public static string CourseAnalyticalDashboardCategoryReport = "CourseAnalyticalDashboardCategoryReport.xlsx";
+        public static string TcnsRetrainingReport = "CourseRetrainingReport.xlsx";
+        public static string TcnsRetrainingReportCSV = "CourseRetrainingReport.csv";
+        public static string BatchwiseAttendanceReport = "BatchwiseAttendanceReport.xlsx";
+        public static string BatchwiseAttendanceReportCSV = "BatchwiseAttendanceReport.csv";
+        public static string LeanerCalendarEvents = "LeanerCalendarEvents.xlsx";
+        public static string TrainerCalendarEvents = "TrainerCalendarEvents.xlsx";
+        public static string ManagerEvaluationReport = "ManagerEvaluationReport.xlsx";
+        public static string ManagerEvaluationReportCSV = "ManagerEvaluationReport.csv";
+        public static string ProfabAccessibilityReport = "ProfabAccessibilityReport.xlsx";
+        public static string ProfabAccessibilityReportCSV = "ProfabAccessibilityReport.csv";
+        public static string ProfabAccessibilityCountReport = "ProfabAccessibilityCountReport.xlsx";
+        public static string ProfabAccessibilityCountReportCSV = "ProfabAccessibilityCountReport.csv";
+        public static string WorkDiaryReport = "WorkDiaryReport.xlsx";
+        public static string WorkDiaryReportCSV = "WorkDiaryReport.csv";
+
+        public static string CourseWiseReportTataSky = "CourseWiseReportTataSky.xlsx";
+        public static string AssessmentResultsDetailsReport = "AssessmentResultsDetailsReport.xlsx";
+
+        public static string LaLearningReport = "LALearningReport.xlsx";
+        public static string LaLearningReportCSV = "LALearningReport.csv"; 
+        
+        public static string LearningAcademyDashboardReport = "LearningAcademyDashboardReport.xlsx";
+        public static string LearningAcademyDashboardReportCSV = "LearningAcademyDashboardReport.csv";
+        
+        public static string NPSDashboardReport = "NPSDashboardReport.xlsx";
+        public static string NPSDashboardReportCSV = "NPSDashboardReport.csv";
+        public static string NominatedUsersReport = "NominatedUsersReport.xlsx";
+
+        public static string TrainerUtilizationReport = "TrainerUtilizationReport.xlsx";
+        public static string TrainerUtilizationReportCSV = "TrainerUtilizationReportCSV.xlsx";
+
+        public static string LABPLearningJourneyReport = "LABPLearningJourneyReport.xlsx";
+        public static string LABPLearningJourneyReportCSV = "LABPLearningJourneyReportCSV.xlsx";
+
+        public static string TrainingFeedbackSurveyReport = "TrainingFeedbackSurveyReport.xlsx";
+        public static string TrainingFeedbackSurveyReportCSV = "TrainingFeedbackSurveyReportCSV.xlsx";
+
+        public static string LABPCardReport = "LABPCardReport.xlsx";
+        public static string LABPCardReportCSV = "LABPCardReportCSV.xlsx";
+
+        public static string ILTConsolidatedReport = "ILTConsolidatedReport.xlsx";
+        public static string ILTConsolidatedReportCSV = "ILTConsolidatedReport.csv";
+
+
+        public static string DevelopmentPlanProgressReport = "DevelopmentPlanProgressReport.xlsx";
+        public static string DevelopmentPlanProgressReportCSV = "DevelopmentPlanProgressReportCSV.csv";
+
+        public static string LearningPlanProgressReport = "LearningPlanProgressReport.xlsx";
+        public static string LearningPlanProgressReportCSV = "LearningPlanProgressReportCSV.csv";
+
+        public static string ManagerEvaluationDetailsCSV = "ManagerEvaluationDetails.csv";
+        public static string ManagerEvaluationDetails = "ManagerEvaluationDetails.xlsx";
+    }
+}

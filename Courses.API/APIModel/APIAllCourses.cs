@@ -1,0 +1,165 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Courses.API.APIModel
+{
+    public class APIAllCourses
+    {
+        public int Id { get; set; }
+        [MaxLength(30)]
+        [Required]
+        public string Code { get; set; }
+        [MaxLength(150)]
+        [Required]
+        public string Title { get; set; }
+
+        [MaxLength(30)]
+        [Required]
+        public string CourseType { get; set; }
+        public string Description { get; set; }
+        public int? CourseAdminID { get; set; }
+        [MaxLength(15)]
+        public bool? LearningApproach { get; set; }
+        [MaxLength(40)]
+        public string Language { get; set; }
+        public bool IsCertificateIssued { get; set; }
+        public int CompletionPeriodDays { get; set; }
+        public float CourseFee { get; set; }
+        [MaxLength(25)]
+        public string Currency { get; set; }
+        public float CreditsPoints { get; set; }
+        [MaxLength(200)]
+        public string ThumbnailPath { get; set; }
+        public int? CategoryId { get; set; }
+        public bool IsPreAssessment { get; set; }
+        public int? PreAssessmentId { get; set; }
+        public bool IsAssessment { get; set; }
+        public int? AssessmentId { get; set; }
+        public bool IsFeedback { get; set; }
+        public int? FeedbackId { get; set; }
+        public bool IsAssignment { get; set; }
+        public int? AssignmentId { get; set; }
+        public bool IsApplicableToAll { get; set; }
+        public bool IsApplicableToExternal { get; set; }
+        public string AdminName { get; set; }
+        public int? SubCategoryId { get; set; }
+        [MaxLength(500)]
+        public string Metadata { get; set; }
+        public bool IsSection { get; set; }
+        public bool IsDiscussionBoard { get; set; }
+        public int? MemoId { get; set; }
+        public bool IsMemoCourse { get; set; }
+        public string Mission { get; set; }
+        public int Points { get; set; }
+        public bool IsAchieveMastery { get; set; }
+        public bool IsAdaptiveLearning { get; set; }
+        public int DurationInMinutes { get; set; }
+        public int TotalModules { get; set; }
+
+        public bool IsShowInCatalogue { get; set; }
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid RowGuid { get; set; }
+        public bool IsModuleHasAssFeed { get; set; }
+        public bool IsManagerEvaluation { get; set; }
+        public int? ManagerEvaluationId { get; set; }
+        public int? prerequisiteCourse { get; set; }
+        public bool IsExternalProvider { get; set; }
+        public string ExternalProvider { get; set; }
+        public string CourseURL { get; set; }
+        public int? noOfDays { get; set; }
+        public bool IsRetraining { get; set; }
+        public int CreatedBy { get; set; }
+        public int ModifiedBy { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public DateTime ModifiedDate { get; set; }
+        public bool IsDeleted { get; set; }
+        public bool IsActive { get; set; }
+        public string prerequisiteCourseName { get; set; }
+        public bool IsFeedbackOptional { get; set; }
+        public float GroupCourseFee { get; set; }
+        public bool? IsVisibleAfterExpiry { get; set; }
+        public bool? IsDashboardCourse { get; set; }
+        public int? isAssessmentReview { get; set; }
+        public bool? PublishCourse { get; set; }
+        public string LxpDetails { get; set; }//glint , glintPlus
+        public bool? IsPrivateContent { get; set; }
+        public int? VendorId { get; set; }
+        public string VendorType { get; set; }
+        public string VendorName { get; set; }
+        public bool IsOJT { get; set; }
+        public int? OJTId { get; set; }
+        [DefaultValue("true")]
+        public bool isVisibleAssessmentDetails { get; set; }
+        public bool? IsRefresherMandatory { get; set; }
+
+
+    }
+
+    public class APIAllCoursesView
+    {
+        public int Id { get; set; }
+        [MaxLength(30)]
+        [Required]
+        public string Code { get; set; }
+        [MaxLength(150)]
+        [Required]
+        public string Title { get; set; }
+
+        [MaxLength(30)]
+        [Required]
+        public string CourseType { get; set; }
+        public string Description { get; set; }
+     
+        public string Language { get; set; }
+        
+        public int? CategoryId { get; set; }
+      
+        public bool IsAssessment { get; set; }
+     
+        public bool IsFeedback { get; set; }
+        
+        [MaxLength(500)]
+        public string Metadata { get; set; }
+       
+        public bool IsActive { get; set; }
+
+        public string UserName { get; set; }
+        public int? NoOfOption { get; set; }
+        public int CreatedBy { get; set; }
+        public int? AreaId { get; set; }
+        public int? BusinessId { get; set; }
+        public int? GroupId { get; set; }
+        public int? LocationId { get; set; }
+        public bool UserCreated { get; set; }
+
+    }
+
+    public class APITotalCoursesView
+    {
+        public List<APIAllCoursesView> Data { get; set; }
+        public int TotalRecords { get; set; }
+    }
+
+    public class APILmsCourseResponse
+    {
+        public int TotalRecords { get; set; }
+        public List<APILmsCourseInfo> Data { get; set; }
+    }
+
+    public class APILmsCourseInfo
+    {
+        public int Id { get; set; }
+        public string Code { get; set; }
+        public string Title { get; set; }
+        public string CourseType { get; set; }
+        public string Description { get; set; }
+        public string ThumbnailPath { get; set; }
+        public int DurationInMin { get; set; }       
+        public string Currency { get; set; }
+        public float Cost { get; set; }
+    }
+}

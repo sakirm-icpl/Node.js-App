@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizManagement.API", "QuizManagement.API.csproj", "{C6087B21-60CE-4111-9248-7E1532A61AD7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureStorageLibrary", "..\..\AzureStorageLibrary\AzureStorageLibrary.csproj", "{C29943A0-C50F-4EB4-AFAD-4CFE5D168542}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6087B21-60CE-4111-9248-7E1532A61AD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6087B21-60CE-4111-9248-7E1532A61AD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6087B21-60CE-4111-9248-7E1532A61AD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6087B21-60CE-4111-9248-7E1532A61AD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C29943A0-C50F-4EB4-AFAD-4CFE5D168542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C29943A0-C50F-4EB4-AFAD-4CFE5D168542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C29943A0-C50F-4EB4-AFAD-4CFE5D168542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C29943A0-C50F-4EB4-AFAD-4CFE5D168542}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E38202C6-762C-4D15-B375-0EAB3D406E95}
+	EndGlobalSection
+EndGlobal
