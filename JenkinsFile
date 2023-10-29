@@ -1,0 +1,42 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout your source code from your version control system (e.g., Git)
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
+                // Build your Node.js application
+                sh 'npm install'
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                // Run your tests (e.g., using Mocha, Jest, or any testing framework)
+                sh 'npm test'
+            }
+        }
+
+        stage('SonarQube Analysis') {
+            steps {
+                script {
+                    try {
+                        def scannerHome = tool 'SonarQubeScanner'
+                        withSonarQubeEnv() {
+                            sh "${scannerHome}/bin/sonar-scanner"
+                        }
+                    } catch (Exception e) {
+                        currentBuild.result = 'UNSTABLE'
+                        error("SonarQube analysis failed: ${e.message}")
+                    }
+                }
+            }
+        }
+    }
+}
