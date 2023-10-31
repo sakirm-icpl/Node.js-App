@@ -14,11 +14,13 @@ pipeline {
         
         stage('SonarQube Analysis') {
             steps {
-                def scannerHome = tool 'SonarScanner for MSBuild'
-                withSonarQubeEnv() {
-                    sh "dotnet ${scannerHome}/SonarScanner.MSBuild.dll begin /k:\"DevSecOps\""
-                    sh "dotnet build"
-                    sh "dotnet ${scannerHome}/SonarScanner.MSBuild.dll end"
+                script {
+                    def scannerHome = tool name: 'SonarScanner for MSBuild', type: 'hudson.plugins.sonar.MsBuildInstallation'
+                    withSonarQubeEnv('YourSonarQubeInstallationName') {
+                        sh "dotnet ${scannerHome}/SonarScanner.MSBuild.dll begin /k:\"DevSecOps\""
+                        sh "dotnet build"
+                        sh "dotnet ${scannerHome}/SonarScanner.MSBuild.dll end"
+                    }
                 }
             }
         }
