@@ -1,28 +1,13 @@
-pipeline {
-    agent any
-
-    environment {
-        COMPOSE_HTTP_TIMEOUT = '360' // Set a longer timeout (in seconds)
+node {
+  stage('SCM') {
+    checkout scm
+  }
+  stage('SonarQube Analysis') {
+    def scannerHome = tool 'SonarScanner for MSBuild'
+    withSonarQubeEnv() {
+      bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll begin /k:\".net-code\""
+      bat "dotnet build"
+      bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll end"
     }
-
-    stages {
-        stage('SCM') {
-            steps {
-                checkout scm
-            }
-        }
-        
-        stage('SonarQube Analysis') {
-            steps {
-                script {
-                    def scannerHome = tool name: 'SonarScanner for MSBuild', type: 'hudson.plugins.sonar.MsBuildInstallation'
-                    withSonarQubeEnv('YourSonarQubeInstallationName') {
-                        sh "dotnet ${scannerHome}/SonarScanner.MSBuild.dll begin /k:\"DevSecOps\""
-                        sh "dotnet build"
-                        sh "dotnet ${scannerHome}/SonarScanner.MSBuild.dll end"
-                    }
-                }
-            }
-        }
-    }
+  }
 }
