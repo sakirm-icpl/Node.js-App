@@ -4,9 +4,11 @@ node {
   }
   stage('SonarQube Analysis') {
     def scannerHome = "C:\\sonar\\sonarqube\\bin\\sonar-scanner-msbuild"
+    def projectFile = "C:\\tmp\\dotnet-app\\Assessment.API\\Assessment.API.csproj"
+
     withSonarQubeEnv() {
+      bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" build \"${projectFile}\""
       bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" \"${scannerHome}\\SonarScanner.MSBuild.dll\" begin /k:\".net-code\""
-      bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" build"
       bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" \"${scannerHome}\\SonarScanner.MSBuild.dll\" end"
     }
   }
