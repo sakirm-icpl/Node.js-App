@@ -1,15 +1,37 @@
-node {
-  stage('SCM') {
-    checkout scm
-  }
-  stage('SonarQube Analysis') {
-    def scannerHome = "C:\\sonar\\sonarqube\\bin\\sonar-scanner-msbuild"
-    def projectFile = "C:\\tmp\\dotnet-app\\Assessment.API\\Assessment.API.csproj"
+pipeline {
+    agent any
 
-    withSonarQubeEnv() {
-      bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" build \"${projectFile}\""
-      bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" \"${scannerHome}\\SonarScanner.MSBuild.dll\" begin /k:\".net-code\""
-      bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" \"${scannerHome}\\SonarScanner.MSBuild.dll\" end"
+    environment {
+        // Define the paths to your tools and project
+        scannerHome = "C:\\sonar\\sonarqube\\bin\\sonar-scanner-msbuild"
+        projectFile = "C:\\tmp\\dotnet-app\\Assessment.API\\Assessment.API.csproj"
     }
-  }
+
+    stages {
+        stage('SCM') {
+            steps {
+                // Checkout your source code from your SCM (e.g., Git)
+                checkout scm
+            }
+        }
+
+        stage('Build and SonarQube Analysis') {
+            steps {
+                // Build the .NET project
+                bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" build \"${projectFile}\""
+
+                // Begin SonarQube analysis
+                withSonarQubeEnv('Your_SonarQube_Environment_Name') {
+                    // Run SonarScanner begin
+                    bat "\"${scannerHome}\\SonarScanner.MSBuild.dll\" begin /k:\".net-code\""
+                    
+                    // Execute MSBuild to build your project
+                    bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" build \"${projectFile}\""
+                    
+                    // End SonarQube analysis
+                    bat "\"${scannerHome}\\SonarScanner.MSBuild.dll\" end"
+                }
+            }
+        }
+    }
 }
