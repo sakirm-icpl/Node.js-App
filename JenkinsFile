@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        PATH = "${tool 'SonarScanner.MSBuild'}\\bin" // Update this path accordingly
+        PATH = "${tool 'SonarScanner for MSBuild'}\\bin" // Update this path accordingly
     }
 
     stages {
         stage('SonarQube Analysis') {
             steps {
                 script {
-                    def scannerHome = tool name: 'SonarScanner.MSBuild', type: 'SonarScanner.MSBuild'
+                    def scannerHome = tool name: 'SonarScanner for MSBuild', type: 'SonarScanner.MSBuild'
                     bat "\"${scannerHome}\\SonarScanner.MSBuild.exe\" begin /k:\".net-code\""
                     bat "\"${scannerHome}\\SonarScanner.MSBuild.exe\" end"
                 }
