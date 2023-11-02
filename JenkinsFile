@@ -1,61 +1,15 @@
-pipeline {
-    agent any
+node {
+  stage('SCM') {
+    checkout scm
+  }
+  stage('SonarQube Analysis') {
+    def scannerHome = "C:\\sonar\\sonarqube\\bin\\sonar-scanner-msbuild"
+    def projectFile = "C:\\tmp\\dotnet-app\\Assessment.API\\Assessment.API.csproj"
 
-    environment {
-        PROJECT_PATH = 'C:\\tmp\\dotnet-app\\Assessment.API\\Assessment.API.csproj'
+    withSonarQubeEnv() {
+      bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" build \"${projectFile}\""
+      bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" \"${scannerHome}\\SonarScanner.MSBuild.dll\" begin /k:\".net-code\""
+      bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" \"${scannerHome}\\SonarScanner.MSBuild.dll\" end"
     }
-
-    stages {
-        stage('Cleanup Workspace') {
-            steps {
-                cleanWs()
-            }
-        }
-
-        stage('Debug') {
-            steps {
-                script {
-                    echo "Current directory: ${pwd()}"
-                    sh 'ls -la'
-                }
-            }
-        }
-
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-
-        stage('Build') {
-            steps {
-                script {
-                    // Change the current working directory to where the project is located
-                    dir('C:\\tmp\\dotnet-app\\Assessment.API') {
-                        // Build the .NET project
-                        bat "dotnet build ${env.PROJECT_PATH}"
-                    }
-                }
-            }
-        }
-
-        stage('SonarQube Analysis') {
-            steps {
-                withSonarQubeEnv('SonarQube servers') {
-                    bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" \"C:\\sonar\\sonarqube\\bin\\sonar-scanner-msbuild\\SonarScanner.MSBuild.dll\" begin /k:\".net-code\""
-                    bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" build"
-                    bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" \"C:\\sonar\\sonarqube\\bin\\sonar-scanner-msbuild\\SonarScanner.MSBuild.dll\" end"
-                }
-            }
-        }
-    }
-
-    post {
-        success {
-            echo 'Pipeline succeeded. You can add additional steps here for success.'
-        }
-        failure {
-            echo 'Pipeline failed. You can handle failure gracefully here.'
-        }
-    }
+  }
 }
