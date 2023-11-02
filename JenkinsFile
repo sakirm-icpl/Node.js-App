@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        // Define the path to your .NET project's .csproj file
-        PROJECT_PATH = 'C:\tmp\dotnet-app\Assessment.API\Assessment.API.csproj'
+        // Define the path to your .NET project's .csproj file with double backslashes
+        PROJECT_PATH = 'C:\\tmp\\dotnet-app\\Assessment.API\\Assessment.API.csproj'
     }
 
     stages {
