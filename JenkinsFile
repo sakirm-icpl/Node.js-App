@@ -18,7 +18,7 @@ pipeline {
                 bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" build \"${projectFile}\""
 
                 withSonarQubeEnv('SonarQube servers') {
-                    bat "\"${scannerHome}\\SonarScanner.MSBuild.dll\" begin /k:\".net-code\""
+                    bat "\"${scannerHome}\\SonarScanner.MSBuild.dll\" begin /k:\"dotnet\""
                     bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" build \"${projectFile}\""
                     bat "\"${scannerHome}\\SonarScanner.MSBuild.dll\" end"
                 }
