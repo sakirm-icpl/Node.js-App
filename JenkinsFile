@@ -4,7 +4,7 @@ node {
   }
 
   stage('Build') {
-    def msbuildTool = tool name: 'SonarScanner for MSBuild', type: 'MSBuildTool'
+    def msbuildTool = tool name: 'SonarQubeScanner', type: 'MSBuildTool'
     def projectFile = "C:\\tmp\\dotnet-app\\Assessment.API\\Assessment.API.csproj"  // Replace with your project's .csproj file
     bat "\"${msbuildTool}\\MSBuild.exe\" /t:Rebuild \"${projectFile}\""
   }
