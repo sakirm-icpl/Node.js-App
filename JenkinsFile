@@ -2,16 +2,25 @@ pipeline {
     agent any
 
     environment {
-        PATH = "${tool 'SonarScanner for MSBuild'}\\bin" // Update this path accordingly
+        scannerHome = "C:\\sonar\\sonarqube\\bin\\sonar-scanner-msbuild-4.6+"
+        projectFile = "C:\\tmp\\dotnet-app\\Assessment.API\\Assessment.API.csproj"
     }
 
     stages {
-        stage('SonarQube Analysis') {
+        stage('SCM') {
             steps {
-                script {
-                    def scannerHome = tool name: 'SonarScanner for MSBuild', type: 'SonarScanner.MSBuild'
-                    bat "\"${scannerHome}\\SonarScanner.MSBuild.exe\" begin /k:\".net-code\""
-                    bat "\"${scannerHome}\\SonarScanner.MSBuild.exe\" end"
+                checkout scm
+            }
+        }
+
+        stage('Build and SonarQube Analysis') {
+            steps {
+                bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" build \"${projectFile}\""
+
+                withSonarQubeEnv('SonarQube servers') {
+                    bat "\"${scannerHome}\\SonarScanner.MSBuild.dll\" begin /k:\".net-code\""
+                    bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" build \"${projectFile}\""
+                    bat "\"${scannerHome}\\SonarScanner.MSBuild.dll\" end"
                 }
             }
         }
