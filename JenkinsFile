@@ -2,20 +2,11 @@ node {
   stage('SCM') {
     checkout scm
   }
-
-  stage('Build') {
-    def msbuildTool = tool name: 'SonarQubeScanner', type: 'MSBuildTool'
-    def projectFile = "C:\\tmp\\dotnet-app\\Assessment.API\\Assessment.API.csproj"  // Replace with your project's .csproj file
-    bat "\"${msbuildTool}\\MSBuild.exe\" /t:Rebuild \"${projectFile}\""
-  }
-
   stage('SonarQube Analysis') {
     def scannerHome = "C:\\sonar\\sonarqube\\bin\\sonar-scanner-msbuild"
-    def solutionFile = "C:\\tmp\\dotnet-app\\Assessment.API\\Assessment.API.sln"  // Replace with your .sln file
-
     withSonarQubeEnv() {
-      bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" build \"${solutionFile}\""
       bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" \"${scannerHome}\\SonarScanner.MSBuild.dll\" begin /k:\".net-code\""
+      bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" build"
       bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" \"${scannerHome}\\SonarScanner.MSBuild.dll\" end"
     }
   }
