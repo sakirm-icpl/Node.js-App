@@ -26,7 +26,7 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('SonarQube Server Name') {
+                withSonarQubeEnv('SonarQube servers') {
                     bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" \"C:\\sonar\\sonarqube\\bin\\sonar-scanner-msbuild\\SonarScanner.MSBuild.dll\" begin /k:\".net-code\""
                     bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" build"
                     bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" \"C:\\sonar\\sonarqube\\bin\\sonar-scanner-msbuild\\SonarScanner.MSBuild.dll\" end"
