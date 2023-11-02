@@ -21,7 +21,7 @@ pipeline {
                 bat "\"C:\\Program Files\\dotnet\\dotnet.exe\" build \"${projectFile}\""
 
                 // Begin SonarQube analysis
-                withSonarQubeEnv('Your_SonarQube_Environment_Name') {
+                withSonarQubeEnv('SonarQube servers') {
                     // Run SonarScanner begin
                     bat "\"${scannerHome}\\SonarScanner.MSBuild.dll\" begin /k:\".net-code\""
                     
