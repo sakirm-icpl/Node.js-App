@@ -6,6 +6,21 @@ pipeline {
     }
 
     stages {
+        stage('Cleanup Workspace') {
+            steps {
+                cleanWs()
+            }
+        }
+
+        stage('Debug') {
+            steps {
+                script {
+                    echo "Current directory: ${pwd()}"
+                    sh 'ls -la'
+                }
+            }
+        }
+
         stage('Checkout') {
             steps {
                 checkout scm
